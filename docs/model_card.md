@@ -4,7 +4,7 @@
 
 The project is designed for Ultralytics YOLOv8n, the nano YOLOv8 detector intended for CPU-friendly object detection. The backend lazy-loads `backend/models/yolov8n.pt` when present, or lets Ultralytics resolve `yolov8n.pt`. For offline demos and fast CI, the app also ships deterministic YOLO-style detections generated from synthetic ground truth.
 
-GitHub Actions runs `scripts/verify_model.py` after dependency installation. That check loads the real YOLOv8n weights through Ultralytics, runs inference on generated frame 1, and fails if the model cannot load or produces invalid output. The weights are intentionally downloaded by the model runtime rather than committed to source control.
+GitHub Actions runs `scripts/verify_model.py` after dependency installation. That check loads the real YOLOv8n weights through Ultralytics, runs inference on generated frame 1, and fails if the model cannot load or produces malformed output. Zero detections are accepted because the generated scene is not guaranteed to contain objects recognizable by YOLOv8n. The weights are intentionally downloaded by the model runtime rather than committed to source control.
 
 ## Intended Use
 
