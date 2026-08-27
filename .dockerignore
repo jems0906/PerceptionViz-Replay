@@ -1,0 +1,9 @@
+.git/
+.github/
+backend/.pytest_cache/
+backend/**/__pycache__/
+frontend/node_modules/
+frontend/dist/
+data_samples/predictions/*.mcap
+backend/models/*.pt
+**/*.pyc

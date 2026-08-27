@@ -46,4 +46,4 @@ npm run build --prefix frontend
 
 ## Deployment
 
-`railway.json` defines separate backend and frontend services. The backend uses precomputed detections by default for fast page loads while keeping `POST /detect/{frame_id}` available for on-demand sample-frame inference.
+`railway.json` defines one Railway service built from the root `Dockerfile`. The image builds the React frontend and serves it from FastAPI alongside the API on the same public port. The backend uses precomputed detections by default for fast page loads while keeping `POST /detect/{frame_id}` available for on-demand sample-frame inference.

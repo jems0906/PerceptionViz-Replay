@@ -6,3 +6,4 @@ dist/
 *.pyc
 backend/models/*.pt
 data_samples/predictions/*.mcap
+frontend/dist/
